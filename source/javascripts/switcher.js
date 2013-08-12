@@ -34,35 +34,35 @@ jQuery(document).ready(function(jQuery) {
 		
 		
 		jQuery(".red" ).click(function(){
-			jQuery("#colors" ).attr("href", "assets/css/stylered.css" );
+			jQuery("#colors" ).attr("href", "stylesheets/stylered.css" );
 			return false;
 		});
 		
 		jQuery(".orange" ).click(function(){
-			jQuery("#colors" ).attr("href", "assets/css/styleorange.css" );
+			jQuery("#colors" ).attr("href", "stylesheets/styleorange.css" );
 			return false;
 		});
 		
 		jQuery(".helio" ).click(function(){
-			jQuery("#colors" ).attr("href", "assets/css/stylehelio.css" );
+			jQuery("#colors" ).attr("href", "stylesheets/stylehelio.css" );
 			return false;
 		});
 		jQuery(".saffron" ).click(function(){
-			jQuery("#colors" ).attr("href", "assets/css/stylesaffron.css" );
+			jQuery("#colors" ).attr("href", "stylesheets/stylesaffron.css" );
 			return false;
 		});
 		
 		jQuery(".warhols_green" ).click(function(){
-			jQuery("#colors" ).attr("href", "assets/css/stylewarholsgreen.css" );
+			jQuery("#colors" ).attr("href", "stylesheets/stylewarholsgreen.css" );
 			return false;
 		});
 		jQuery(".purple" ).click(function(){
-			jQuery("#colors" ).attr("href", "assets/css/stylepurple.css" );
+			jQuery("#colors" ).attr("href", "stylesheets/stylepurple.css" );
 			return false;
 		});
 		
 		jQuery(".citynight" ).click(function(){
-			jQuery("#colors" ).attr("href", "assets/css/stylecitynight.css" );
+			jQuery("#colors" ).attr("href", "stylesheets/stylecitynight.css" );
 			return false;
 		});
 		
@@ -120,7 +120,7 @@ jQuery(document).ready(function(jQuery) {
 			jQuery('body').css('backgroundImage','url(./images/bg/noise.png)');
                         jQuery('#navigation').css('backgroundColor','#333');
 			jQuery('#navigation ul ul').css('backgroundColor','#333');
-                        jQuery("#colors" ).attr("href", "assets/css/style.css" );
+                        jQuery("#colors" ).attr("href", "stylesheets/style.css" );
 		})
 			
 
