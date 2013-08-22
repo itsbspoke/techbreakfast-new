@@ -4,8 +4,12 @@
 		<div class="span12">
 			<div class="well">
 				<p class="land left large-text">
-        <span class="main-color">Next event:</span> August 14, 2013 8-9:30AM in the Garage at Packard Place.</span>
-				</p>
+        <span class="main-color">Next event:</span> 
+        <%= (Chronic.parse("second Wednesday this month") || Chronic.parse("second Wednesday next month")).strftime("%b %d, %Y") %>
+        8-9:30AM in the Garage at Packard Place.</span>
+    </p>
+    <p>Pitchsters: <span class="firstword">Pitchster 1</span>, <span class="firstword">Pitchster 2</span>, and <span class="firstword">Pitchster 3</span></p>
+    <p>Panelists: <span class="firstword">Panelist 1</span> and <span class="firstword">Panelist 2</span></p>
 			
 			</div>
 		</div>
@@ -16,7 +20,7 @@
 <section id="service-section">
   	<div class="row-fluid">
 		<hr class="half">
-			<h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">TechBreakfast CLT</span> is pitch practice.</span>
+			<h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">TechBreakfast CLT</span> is...</span>
 			</h2>
 		<hr class="half">
 	</div>
@@ -31,6 +35,10 @@
       sit on our panels, to the community that makes up our audience, we create a great atmosphere where you can get connected
       without fear.
       </p>
+      <p>
+        The event is free, we just ask for your email address to keep you up to date with future Charlotte startup news, including what TechBreakfast
+        is up to.  We're just one event in the greater Charlotte community, and we want our attendees to get the most out of it that they can.
+			</p>
 		</div>
 		<!-- END FEATURE ITEM-->	
 		<!-- FEATURE ITEM-->
