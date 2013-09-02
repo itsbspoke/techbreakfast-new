@@ -4,13 +4,12 @@
 				<p class="land left large-text">
         <span class="main-color">Next event:</span>
         <% months = {1 => "January", 4 => "April", 7 => "July", 10 => "October"}
-        next_ifp_month = months[months.keys.select{ |month| month > Date.today.month }.first] %>
-        <%= (Chronic.parse("second Wednesday in #{next_ifp_month}")).strftime("%b %d, %Y") %>
+        numdays = (months.collect{ |month, mstr| d = Chronic.parse("second Wednesday in #{mstr}"); (Date.parse(d.to_s) - Date.today) }).min %>
+        <%= (Date.today+numdays).strftime("%b %d, %Y") %>
         8-9:30AM in the Garage at Packard Place.</span>
       </p>
       <!--
     <p>Pitchsters: <span class="firstword">Pitchster 1</span>, <span class="firstword">Pitchster 2</span>, and <span class="firstword">Pitchster 3</span></p>
-    <p>Panelists: <span class="firstword">Panelist 1</span> and <span class="firstword">Panelist 2</span></p>
       -->
       <p>Pitchsters to be announced.  <a href="/rsvp.html">RSVP</a> or <a href="/apply.html">Apply</a> today!</p>
 			

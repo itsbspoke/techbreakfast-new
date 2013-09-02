@@ -1,17 +1,8 @@
-	<div class="row-fluid">
-		<div class="span12">
-			<div class="well">
-				<p class="land left large-text">
-        <span class="main-color">Next event:</span> 
-        <%= (Chronic.parse("second Wednesday this month") || Chronic.parse("second Wednesday next month")).strftime("%b %d, %Y") %>
-        8-9:30AM in the Garage at Packard Place.</span>
-      </p>
-      <!--
-    <p>Pitchsters: <span class="firstword">Pitchster 1</span>, <span class="firstword">Pitchster 2</span>, and <span class="firstword">Pitchster 3</span></p>
-    <p>Panelists: <span class="firstword">Panelist 1</span> and <span class="firstword">Panelist 2</span></p>
-      -->
-      <p>Pitchsters and Panelists to be announced. <a href="/rsvp.html">RSVP</a> or <a href="/apply.html">Apply</a> today!</p>
-			
-			</div>
-		</div>
-	</div>
+<%
+    month = (Chronic.parse("second Wednesday this month") || Chronic.parse("second Wednesday next month")).month
+    if (month % 3) == 1
+  %>
+    <%= partial "next_ifp_event" %>
+  <% else %>
+    <%= partial "next_tb_event" %>
+  <% end %>
