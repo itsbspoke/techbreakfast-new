@@ -73,48 +73,38 @@ end
 helpers do
   def second_wednesday_of(month, year)
     date = Date.parse("#{year}/#{month}/07")
-    found = false
-    while(!found) do
-      date = date+1
-      next unless date.wednesday?
-      next unless (date - 14).month != date.month
-      found = true
-    end
+    date = date.next_day until date.wednesday?
     date
   end
 
   def next_event_date(from_date = Date.today)
-    if second_wednesday_of(from_date.month, from_date.year) > from_date
-      second_wednesday_of(from_date.month, from_date.year)
+    second_wednesday_of_this_month = second_wednesday_of(from_date.month, from_date.year)
+    if second_wednesday_of_this_month > from_date
+      second_wednesday_of_this_month
     else
-      next_month = from_date+30
+      next_month = from_date.next_month
       second_wednesday_of(next_month.month, next_month.year)
     end
   end
 
   def next_tb_event_date
-    found = false
-    current_date = Date.today
-    while(!found) do
-      current_date = next_event_date(current_date)
-      next if [1, 4, 7, 10].include?(current_date.month)
-      found = true
-    end
-    current_date
+    date = next_event_date
+    date = next_event_date(date) while third_month?(date)
+    date
   end
 
   def next_ifp_event_date
-    found = false
-    current_date = Date.today
-    while(!found) do
-      current_date = next_event_date(current_date)
-      next unless [1, 4, 7, 10].include?(current_date.month)
-      found = true
-    end
-    current_date
+    date = next_event_date
+    date = next_event_date(date) until third_month?(date)
+    date
   end
 
   def next_event_is_ifp?
     next_event_date == next_ifp_event_date
+  end
+
+  def third_month?(date)
+    third_months = [1, 4, 7, 10]
+    third_months.include?(date.month)
   end
 end
