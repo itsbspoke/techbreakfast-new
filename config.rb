@@ -88,19 +88,21 @@ helpers do
   end
 
   def next_tb_event_date
-    date = next_event_date
-    date = next_event_date(date) while third_month?(date)
-    date
+    next_event { |date| not third_month?(date) }
   end
 
   def next_ifp_event_date
-    date = next_event_date
-    date = next_event_date(date) until third_month?(date)
-    date
+    next_event { |date| third_month?(date) }
   end
 
   def next_event_is_ifp?
     next_event_date == next_ifp_event_date
+  end
+
+  def next_event(&block)
+    date = next_event_date
+    date = next_event_date(date) until block.call(date)
+    date
   end
 
   def third_month?(date)
