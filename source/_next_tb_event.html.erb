@@ -3,17 +3,15 @@
 			<div class="well">
 				<p class="land left large-text">
         <span class="main-color">Next event:</span>
-        <% months = {2 => "February", 3 => "March", 5 => "May", 6=> "June", 8 => "August", 9=> "September", 11 => "November", 12 => "December"}
-        numdays = (months.collect{ |month, mstr| d = Chronic.parse("second Wednesday in #{mstr}"); (Date.parse(d.to_s) - Date.today) }).min %>
-        <%= (Date.today+numdays).strftime("%b %d, %Y") %>
+        <%= next_tb_event_date.strftime("%b %d, %Y") %>
         8-9:30AM in the Garage at Packard Place.</span>
       </p>
-    <p>Pitchsters: <span class="firstword">GreenUSA Solutions</span>, <span class="firstword">Business Policy Solutions</span>, and <span class="firstword">Fundanoodle</span></p>
+    <!-- <p>Pitchsters: <span class="firstword">GreenUSA Solutions</span>, <span class="firstword">Business Policy Solutions</span>, and <span class="firstword">Fundanoodle</span></p>
     <p>Panelists: <span class="firstword">Terry Cox</span> and <span class="firstword">Tim Cheadle</span></p>
 
       <p><a href="/rsvp.html">RSVP</a> or <a href="/apply.html">Apply for the next event</a> today!</p>
-
-      <!-- <p>Pitchsters and panelists to be announced.  <a href="/rsvp.html">RSVP</a> or <a href="/apply.html">Apply</a> today!</p> -->
+-->
+      <p>Pitchsters and panelists to be announced.  <a href="/rsvp.html">RSVP</a> or <a href="/apply.html">Apply</a> today!</p>
 			
 			</div>
 		</div>

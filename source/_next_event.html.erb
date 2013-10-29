@@ -1,7 +1,6 @@
-<%
-    month = (Chronic.parse("second Wednesday this month") || Chronic.parse("second Wednesday next month")).month
-    if (month % 3) == 1
-  %>
+<% 
+  if next_event_is_ifp?
+%>
     <%= partial "next_ifp_event" %>
   <% else %>
     <%= partial "next_tb_event" %>
