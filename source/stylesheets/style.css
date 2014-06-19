@@ -65,7 +65,7 @@ body
 	/************** TOP BANNER INDEX & 404 ************/
 .action-banner-bg
 {
-	background: #2790B0 url(../images/sclt-skyline-crop.png) top left repeat;
+	background: #2790B0 url(../images/cropped-sclt.png) top center repeat;
 	background-size: 100% 100%;
 	box-shadow: 0px 5px 12px rgba(50, 50, 50, 0.35) inset;
 	height: 100%;
