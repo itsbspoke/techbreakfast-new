@@ -141,13 +141,13 @@ color:#fff;
 	background: rgba(0,0,0,0.9);
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
-	/*border-left: 4px solid #2790B0;
-	border-top: 4px solid #2790B0;
-	border-bottom: 4px solid #2790B0;
-	border-right: 4px solid #2790B0;*/
+	/*border-left: 4px solid #2b648f;
+	border-top: 4px solid #2b648f;
+	border-bottom: 4px solid #2b648f;
+	border-right: 4px solid #2b648f;*/
 }
 .da-slide .da-link:hover a span.main-link{
-	/*border-left:4px solid #2790B0;*/
+	/*border-left:4px solid #2b648f;*/
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 }

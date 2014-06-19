@@ -30,7 +30,7 @@ text-transform: uppercase;
 	-o-transition:  color 0.2s ease-in-out;
 	-ms-transition:  color 0.2s ease-in-out;
 	transition:  color 0.2s ease-in-out;
-	color:#2790B0;
+	color:#2b648f;
 }
 .st-accordion ul li > a span{
 	background: transparent url(../../images/down.png) no-repeat center center;
