@@ -1,0 +1,52 @@
+<% content_for(:title, "Thanks for your application") %>
+<!-- BODY-->
+<body data-spy="scroll" data-target=".scroller-spy" data-twttr-rendered="true">
+<!--START MAIN-WRAPPER--> 
+<div class="main-wrapper">
+  <%= partial "page_top_section" %>
+  <!-- MAIN CONTENT CONTAINER -->
+  <div class="container">
+    <!-- START MARKETING DIV-->
+    <div class="marketing">
+
+      <!-- PITCHSTERS SECTION-->
+      <section id="about-section">
+        <!-- OUR PITCHSTERS-->
+        <div class="row-fluid">
+          <hr class="half">
+          <h2 class="center standart-h2title "> <span class="large-text">Thanks for your application!</span></span>
+        </h2>
+        <hr class="half">
+      </div>
+      <div class="row">
+        <div class="span6 textleft">
+          <!-- PARAGRAPH -->
+          <p>
+          <strong>
+            <span class="main-color">Next event:</span>
+            <%= next_event_date.strftime("%b %d, %Y") %>
+            8-9:30AM in the Garage at Packard Place.</span>
+        </strong></p>
+
+
+        <p>See you there!</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+      </section>
+
+
+
+    </div>
+    <!-- END MAIN WRAPPER-->
+    <%= partial "footer" %>
+  </div>
+</div>
+
+<%= partial "javascripts" %>
+
+</body>
