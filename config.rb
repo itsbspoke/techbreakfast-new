@@ -2,7 +2,9 @@ require 'date'
 ###
 # Compass
 ###
-
+activate :blog do |blog|
+  # set options on blog
+end
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact

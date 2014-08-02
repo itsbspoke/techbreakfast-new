@@ -3,14 +3,13 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.1.4"
-gem 'middleman-blog'
-
+gem "middleman-blog"
+gem "middleman-core"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 gem 'middleman-gh-pages'
 gem 'thin'
 gem 'foreman'
-
 gem "chronic"
 
 # For faster file watcher updates on Windows:
