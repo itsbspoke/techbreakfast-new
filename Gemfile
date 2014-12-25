@@ -2,15 +2,16 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~>3.1.4"
+gem "middleman"
 gem "middleman-blog"
 gem "middleman-core"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
-gem 'middleman-gh-pages'
+gem 'middleman-deploy', '~> 0.3.0'
 gem 'thin'
 gem 'foreman'
 gem "chronic"
+gem "dotenv"
 
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
