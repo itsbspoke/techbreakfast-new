@@ -12,6 +12,7 @@ gem 'thin'
 gem 'foreman'
 gem "chronic"
 gem "dotenv"
+gem "rake", "~> 10.4.2"
 
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
