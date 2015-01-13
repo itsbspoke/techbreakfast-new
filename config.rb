@@ -37,15 +37,25 @@ end
 # Deployment
 ###
 
-activate :deploy do |deploy|
-  deploy.method   = :ftp
-  deploy.host     = 'ftp.pitchbreakfast.com'
-  deploy.path     = '/'
-  deploy.user     = ENV["UNAME"]
-  deploy.password = ENV["PWORD"]
+
+case ENV['TARGET'].to_s.downcase
+when 'github'
+  activate :deploy do |deploy|
+    deploy.method = :git
+  end
+else
+  activate :deploy do |deploy|
+    deploy.method   = :ftp
+    deploy.host     = 'ftp.pitchbreakfast.com'
+    deploy.path     = '/'
+    deploy.user     = ENV["UNAME"]
+    deploy.password = ENV["PWORD"]
   
-  deploy.build_before = true
+    deploy.build_before = true
+  end
 end
+
+
 
 
 ###
