@@ -101,23 +101,26 @@ end
 
 helpers do
   def second_wednesday_of(month, year)
-    date = Date.parse("#{year}/#{month}/07")
-    found = false
-    while(!found) do
-      date = date+1
-      next unless date.wednesday?
-      next unless (date - 14).month != date.month
-      found = true
+    date = Date.new(year, month, 1)
+
+    if date.wednesday?
+      date + 7
+    else
+      wday = date.wday
+      days = wday > 3 ? wday - 3 : wday + 4
+      date + (14 - days)
     end
-    date
   end
 
   def next_event_date(from_date = Date.today)
-    if second_wednesday_of(from_date.month, from_date.year) > from_date
-      second_wednesday_of(from_date.month, from_date.year)
+    next_event = second_wednesday_of(from_date.month, from_date.year)
+
+    if next_event > from_date
+      next_event
     else
-      next_month = from_date+30
-      second_wednesday_of(next_month.month, next_month.year)
+      next_month = from_date.next_month
+      next_month_beginning = next_month - (next_month.day + 1)
+      next_event_date(next_month_beginning)
     end
   end
 
